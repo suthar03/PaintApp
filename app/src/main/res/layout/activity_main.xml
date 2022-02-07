@@ -8,56 +8,61 @@
 
     <LinearLayout
         android:id="@+id/toolbar"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:layout_margin="8dp"
-        android:background="@drawable/toolbar_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="8dp"
+        android:background="@drawable/toolbar_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
         <ImageView
             android:id="@+id/iv_line"
-            android:src="@drawable/curve_line"
-            android:padding="10dp"
-            android:layout_weight="1"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/inactivebtn_background"
-            android:layout_height="wrap_content"/>
+            android:padding="10dp"
+            android:src="@drawable/curve_line" />
+
         <ImageView
             android:id="@+id/iv_arrow"
-            android:src="@drawable/arrow"
-            android:padding="18dp"
-            android:layout_weight="1"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/inactivebtn_background"
-            android:layout_height="match_parent"/>
+            android:padding="18dp"
+            android:src="@drawable/arrow" />
+
         <ImageView
             android:id="@+id/iv_rectangle"
-            android:src="@drawable/rectangle"
-            android:padding="10dp"
-            android:layout_weight="1"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/inactivebtn_background"
-            android:layout_height="match_parent"/>
+            android:padding="10dp"
+            android:src="@drawable/rectangle" />
+
         <ImageView
             android:id="@+id/iv_circle"
-            android:src="@drawable/circle"
-            android:padding="10dp"
-            android:layout_weight="1"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/inactivebtn_background"
-            android:layout_height="match_parent"/>
+            android:padding="10dp"
+            android:src="@drawable/circle" />
+
         <ImageView
             android:id="@+id/iv_colors"
-            android:src="@drawable/color_selection"
-            android:padding="10dp"
-            android:layout_weight="1"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/inactivebtn_background"
-            android:layout_height="match_parent"/>
+            android:padding="10dp"
+            android:src="@drawable/color_selection" />
     </LinearLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -66,5 +71,46 @@
 
         <include layout="@layout/paint_view" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/colorSelctionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:gravity="right"
+        android:keepScreenOn="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/colorRed"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/redcolor_background" />
+
+        <ImageView
+            android:id="@+id/colorGreen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/greencolor_background" />
+
+        <ImageView
+            android:id="@+id/colorBlue"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bluecolor_background" />
+
+        <ImageView
+            android:id="@+id/colorBlack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/blackcolor_background" />
+
+    </LinearLayout>
 
 </RelativeLayout>
