@@ -9,6 +9,6 @@ class Utils {
         const val DRAW_RECTANGLE : Int = 2
         const val DRAW_CIRCLE : Int = 3
         var typeOfLine:Int = 0
-        var currentColor = Color.BLACK
+        var drawingColor = Color.BLACK
     }
 }

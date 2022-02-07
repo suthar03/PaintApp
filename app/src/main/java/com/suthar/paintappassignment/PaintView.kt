@@ -12,6 +12,7 @@ import com.suthar.paintappassignment.Utils.Companion.DRAW_ARROW_LINE
 import com.suthar.paintappassignment.Utils.Companion.DRAW_CIRCLE
 import com.suthar.paintappassignment.Utils.Companion.DRAW_CURVE_LINE
 import com.suthar.paintappassignment.Utils.Companion.DRAW_RECTANGLE
+import com.suthar.paintappassignment.Utils.Companion.drawingColor
 import com.suthar.paintappassignment.Utils.Companion.typeOfLine
 import kotlin.math.sqrt
 
@@ -26,14 +27,13 @@ class PaintView : View{
     private var params : ViewGroup.LayoutParams?= null
 
     private var path = Path()
-    private val drawColor = ResourcesCompat.getColor(resources, R.color.colorPaint, null)
-    private val backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
+    private val backgroundColor = ResourcesCompat.getColor(resources, R.color.white, null)
     private lateinit var extraCanvas: Canvas
     private lateinit var extraBitmap: Bitmap
 
     // Set up the paint with which to draw.
     private val paint = Paint().apply {
-        color = drawColor
+        color = drawingColor
         // Smooths out edges of what is drawn without affecting shape.
         isAntiAlias = true
         // Dithering affects how colors with higher-precision than the device are down-sampled.
