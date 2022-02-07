@@ -1,12 +1,14 @@
 package com.suthar.paintappassignment
 
 import android.content.Context
-import android.graphics.*
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Path
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
-import androidx.core.content.res.ResourcesCompat
 import com.suthar.paintappassignment.Utils.Companion.DRAW_ARROW_LINE
 import com.suthar.paintappassignment.Utils.Companion.DRAW_CIRCLE
 import com.suthar.paintappassignment.Utils.Companion.DRAW_CURVE_LINE
@@ -38,7 +40,7 @@ class PaintView : View {
         if (::extraBitmap.isInitialized) extraBitmap.recycle()
         extraBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
         extraCanvas = Canvas(extraBitmap)
-
+        extraCanvas.drawColor(Color.WHITE)
     }
 
     override fun onDraw(canvas: Canvas) {

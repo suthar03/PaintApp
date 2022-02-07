@@ -1,13 +1,11 @@
 package com.suthar.paintappassignment
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.suthar.paintappassignment.Utils.Companion.DRAW_ARROW_LINE
 import com.suthar.paintappassignment.Utils.Companion.DRAW_CIRCLE
